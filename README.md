@@ -1,16 +1,16 @@
 # Namaste-Typescript
-Pure TypeScript + jQuery application for beginners
+ TypeScript + jQuery application for beginners
 
 :pray: Namaste is the word used for welcoming respected ones
 
-####Run
+####To run the app
 
-> goto application folder and type **tsc**
+> goto application folder and type **tsc** command
 
 ```
 $cd appFolder
 
 $tsc
 ```
-
+> open *index.html* in web browser
 
