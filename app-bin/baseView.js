@@ -1,5 +1,4 @@
 define(["require", "exports"], function (require, exports) {
-    "use strict";
     var BaseView = (function () {
         function BaseView(container) {
             this.container = container;
@@ -31,6 +30,6 @@ define(["require", "exports"], function (require, exports) {
             debugger;
         };
         return BaseView;
-    }());
+    })();
     exports.BaseView = BaseView;
 });

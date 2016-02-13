@@ -2,12 +2,8 @@
 /**
  * Calss is for EventHandler
  */
-export interface CrGenericEventHandler {
-  on(type: string, handler: Function, data?: any): void;
-  off(type: string): void;
-  trigger(type: string, data?: any): void;
-}
-
+/// <reference path="./genericEventHandler.ts"/>
+import {CrGenericEventHandler} from './genericEventHandler';
 
 export class BaseView implements CrGenericEventHandler {
 
