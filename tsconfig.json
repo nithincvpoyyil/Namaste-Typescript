@@ -1,13 +1,13 @@
 {
-    "compilerOptions": {
-        "module": "amd",
-        "removeComments": true,
-        "sourceMap": false,
-        "target":  "es5",
-        "outDir":"app-bin"
-    },
-    
-    "files": [
-        "app-src/crMain.ts"
-    ]
+  "compilerOptions": {
+    "module": "amd",
+    "removeComments": true,
+    "sourceMap": false,
+    "target": "es5",
+    "outDir": "app-bin"
+  },
+
+  "files": [
+    "app-src/crMain.ts"
+  ]
 }
