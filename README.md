@@ -14,3 +14,5 @@ $tsc
 ```
 > open *index.html* in web browser
 
+
+>[Website](http://nithincvpoyyil.github.io/Namaste-Typescript)
