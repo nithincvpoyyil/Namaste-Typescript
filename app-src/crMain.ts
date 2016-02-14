@@ -1,4 +1,7 @@
 
+/**
+ * Controller class which calls view class for rendering.
+ */
 ///<reference path="crModel.ts" />
 ///<reference path="crService.ts" />
 ///<reference path="../libs/jquery.d.ts" />
@@ -15,28 +18,27 @@ export class CrMain {
   constructor() {
     this.crCollection = [];
     this.view = new CrView($(".cr-container"));
-    this.addCR();
+    this.registerEvents();
   }
 
-  addCR() {
+  // register events
+  registerEvents() {
     var self = this;
-    var addCRFun = function(data: any): void { self.addCRImpl.call(self, data) };
-    this.view.on("add:CR", addCRFun, "more-args");
+    var addCRFunction = function(data: any): void { self.addCR.call(self, data) };
+    this.view.on("add:CR", addCRFunction, "more-args");
   }
 
-  addCRImpl(data: string) {
+  // To add CR to crCollection and update the view
+  addCR(data: string) {
     var crModel = new CrModel(data);
     this.crCollection.push(crModel);
     this.view.addCR(crModel);
   }
 
-  removeCR() {
-
-  }
-
-  removeCRImpl(id: string) {
-    this.crCollection=this.crCollection.filter(function(item){
-      return item.getName()!==id;
+  // To remove cr from crCollection and update the view
+  removeCR(id: string) {
+    this.crCollection = this.crCollection.filter(function(item) {
+      return item.getName() !== id;
     });
   }
 }
