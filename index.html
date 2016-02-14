@@ -1,24 +1,88 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title> CR Manager </title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <head>
+    <title>
+      CR Manager
+    </title>
     <link rel="stylesheet" href="styles/bulma.min.css">
+    <style>
+      .cr-container {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+      }
+      .cr-items {
+        max-height: 80%;
+        width: 100%;
+        overflow-y: auto;
+      }
 
-    
-</head>
+      .add-btn {
+        width: 50%;
+        padding: 5px;
+        margin: 20px;
+        text-align: center;
+      }
+      .cr-popup {
+        height: 0;
+        width: 400px;
+        position: absolute;
+        background: #F9F9F9;
+        left: calc(50% - 200px);
+        top: -500px;
+        box-shadow: 1px 1px 17px #ed4117;
+        border-radius: 10px;
+        transition: all 1s ease-in;
+      }
 
-<body>
+      .orginal-size {
+        top: calc(50% - 50px);
+        height: 100px;
+        z-index: 999;
+      }
+      .close-btn {
+        position: absolute;
+        color: #ffffff;
+        top: 1px;
+        right: 5px;
+        margin: 1px;
+        background: blue;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        border-radius: 10px;
+        font-weight: 400;
+        cursor: pointer;
+
+      }
+
+    </style>
+  </head>
+
+  <body>
 
     <script type="text/javascript" src="libs/require.js" data-main="app-starter/appMain.start.js"></script>
 
-    <div class="cr-container columns is-12">
-        <button class="add-btn">+</button>
-        <div class="cr-items"></div>
+    <div class="cr-container">
+      <!--    popup code -->
+      <div class="cr-popup">
+        <span class="close-btn">x</span>
+        <div class="columns is-12">
+          <span>CR Name</span>
+          <input type="text" class="cr-input" id="cr-input" name="cr-input"/>
+        </div>
+        <div class="columns is-12">
+          <button class="submit-btn button is-info">Add CR</button>
+        </div>
+      </div>
+
+      <!--    item code -->
+
+      <div class="cr-items column is-12"></div>
+      <!--    add button code -->
+      <button class="add-btn button is-info">Add CR</button>
     </div>
 
-</body>
-
+  </body>
 </html>

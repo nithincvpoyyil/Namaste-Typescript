@@ -8,8 +8,7 @@ import {CrGenericEventHandler} from './genericEventHandler';
 export class BaseView implements CrGenericEventHandler {
 
   private container: any;
-  public eventCollection: { event: string; handler: Function; data: any }[];
-
+  eventCollection: { event: string; handler: Function; data: any }[];
   constructor(container) {
     this.container = container;
     this.eventCollection = [];
@@ -41,8 +40,5 @@ export class BaseView implements CrGenericEventHandler {
   logger(msg: any): void {
     console.info(new Date().getTime() + " >>" + msg)
   }
-
-  debug(): void {
-    debugger;
-  }
+  
 }

@@ -26,9 +26,6 @@ define(["require", "exports"], function (require, exports) {
         BaseView.prototype.logger = function (msg) {
             console.info(new Date().getTime() + " >>" + msg);
         };
-        BaseView.prototype.debug = function () {
-            debugger;
-        };
         return BaseView;
     })();
     exports.BaseView = BaseView;
