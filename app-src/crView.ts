@@ -30,6 +30,7 @@ export class CrView extends BaseView {
     // on clicking submit
     $(".submit-btn", self.getContainer()).off("click").on("click", function() {
       var text = self.getContainer().find("#cr-input").val();
+      self.getContainer().find("#cr-input").val("")
       if (text) {
         self.getContainer().find(".cr-popup").removeClass("orginal-size");
         // triggering add:CR event with data

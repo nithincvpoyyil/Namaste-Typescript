@@ -4,6 +4,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 define(["require", "exports", './baseView'], function (require, exports, baseView_1) {
+    "use strict";
     var CrView = (function (_super) {
         __extends(CrView, _super);
         function CrView(targetNode) {
@@ -20,6 +21,7 @@ define(["require", "exports", './baseView'], function (require, exports, baseVie
             });
             $(".submit-btn", self.getContainer()).off("click").on("click", function () {
                 var text = self.getContainer().find("#cr-input").val();
+                self.getContainer().find("#cr-input").val("");
                 if (text) {
                     self.getContainer().find(".cr-popup").removeClass("orginal-size");
                     self.trigger("add:CR", text);
@@ -34,6 +36,6 @@ define(["require", "exports", './baseView'], function (require, exports, baseVie
         CrView.prototype.removeCR = function (id) {
         };
         return CrView;
-    })(baseView_1.BaseView);
+    }(baseView_1.BaseView));
     exports.CrView = CrView;
 });
